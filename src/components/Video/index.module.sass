@@ -21,8 +21,23 @@
         overflow: hidden
         position: relative
 
-        video
+        .video
             width: 1920px
             height: max-content
             user-select: none
             pointer-events: none
+            transition: opacity 0.5s ease-in-out
+
+            &.active
+                opacity: 1
+                position: relative
+                z-index: 1
+
+            &.hidden
+                opacity: 0
+                position: absolute
+                top: 0
+                left: 0
+                z-index: 0
+
+
